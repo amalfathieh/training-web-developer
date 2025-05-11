@@ -53,6 +53,137 @@
         </div>
       </fieldset>
 
+      
+      <!-- Position and Availability Section -->
+      <fieldset>
+        <legend>Position & Availability</legend>
+        <div>
+          <label for="desiredPosition">Desired Position</label>
+          <input
+            type="text"
+            name="desiredPosition"
+            list="positions"
+            placeholder="e.g., Software Developer" />
+          <datalist id="positions">
+            <option value="Software Developer"></option>
+            <option value="Web Designer"></option>
+            <option value="Project Manager"></option>
+            <option value="Data Analyst"></option>
+            <option value="Marketing Specialist"></option>
+          </datalist>
+        </div>
+
+        <div>
+          <label for="salary">Salary Expectation</label>
+          <input type="number" name="salary" min="0" max="500" required />
+        </div>
+
+        <!-- Availability Radio Buttons -->
+        <fieldset>
+          <legend>Availability<span class="required-mark">*</span></legend>
+          <input
+            type="radio"
+            name="availability"
+            id=""
+            value="full-time"
+            required
+            checked />
+          <label for="fullTime">Full-time</label>
+
+          <input type="radio" name="availability" id="" value="partTime" />
+          <label for="partTime">Part-time</label>
+
+          <input type="radio" name="availability" id="" value="freelance" />
+          <label for="freelance">Freelance</label>
+        </fieldset>
+
+        <div>
+          <label for="preferredLocation">Preferred Location</label>
+          <select name="preferredLocation">
+            <option value="remote">Remote</option>
+            <option value="on-site">On Site</option>
+            <option value="hybrid">Hybrid</option>
+          </select>
+        </div>
+
+        <div>
+          <input type="file" name="file" id="" />
+        </div>
+      </fieldset>
+
+      <!-- Skills and Experience Section -->
+      <fieldset>
+        <legend>Skills & Experience</legend>
+
+        <!-- Skills Checkboxes -->
+        <fieldset class="checkbox-group">
+          <legend>Skills (select all that apply)</legend>
+          <input type="checkbox" id="htmlSkill" name="skills[]" value="HTML" />
+          <label for="htmlSkill">HTML</label>
+
+          <input type="checkbox" id="cssSkill" name="skills[]" value="CSS" />
+          <label for="cssSkill">CSS</label>
+
+          <input
+            type="checkbox"
+            id="jsSkill"
+            name="skills[]"
+            value="JavaScript" />
+          <label for="jsSkill">JavaScript</label>
+
+          <input type="checkbox" id="gitSkill" name="skills[]" value="Git" />
+          <label for="gitSkill">Git</label>
+
+          <input
+            type="checkbox"
+            id="pythonSkill"
+            name="skills[]"
+            value="Python" />
+          <label for="pythonSkill">Python</label>
+        </fieldset>
+
+        <div>
+          <label for="coverLetter"
+            >Cover Letter <span class="required-mark">*</span></label
+          >
+          <textarea
+            id="coverLetter"
+            name="coverLetter"
+            rows="8"
+            cols="50"
+            required
+            placeholder="Tell us why you're a great fit for this role..."></textarea>
+        </div>
+
+        <div>
+          <label for="resume">Upload Resume</label>
+          <input
+            type="file"
+            id="resume"
+            name="resume"
+            accept=".pdf,.doc,.docx" />
+        </div>
+      </fieldset>
+
+      <!-- Security Section -->
+      <fieldset>
+        <legend>Account Setup</legend>
+        <div>
+          <label for="password"
+            >Create Password <span class="required-mark">*</span></label
+          >
+          <input
+            type="password"
+            name="password"
+            required
+            minlength="8"
+            placeholder="Minimum 8 characters" />
+        </div>
+      </fieldset>
+
+      <!-- Hidden Input -->
+      <input type="hidden" name="formVersion" value="v1.0.0" />
+
       <!-- Submit Button -->
       <button type="submit" aria-label="Submit Your Job Application">
         Submit Application
