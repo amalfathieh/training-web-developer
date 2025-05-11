@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Job Application Form</title>
+    <meta name="description" content="Apply for a position at our company" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  </head>
+  <body>
+    <header>
+      <h1>Job Application Form</h1>
+      <p>
+        Please fill out the form below to apply for a position at our company.
+        We look forward to reviewing your application.
+      </p>
+    </header>
+
+    <form action="#" method="post">
+      <!-- Personal Information Section -->
+      <fieldset>
+        <div>
+          <label for="fullName"
+            >Full Name <span class="required-mark">*</span></label
+          >
+          <input
+            type="text"
+            required
+            name="fullName"
+            placeholder="Enter your full name" />
+        </div>
+
+        <div>
+          <label for="email">Email <span class="required-mark">*</span></label>
+          <input type="email" required name="email" />
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            required
+            name="phone"
+            placeholder="e.g., +1-555-123-4567" />
+        </div>
+
+        <div>
+          <label for="linkedin">LinkedIn Profile URL</label>
+          <input
+            type="url"
+            required
+            name="linkedin"
+            placeholder="https://linkedin.com/in/yourprofile" />
+        </div>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit" aria-label="Submit Your Job Application">
+        Submit Application
+      </button>
+    </form>
+  </body>
+</html>
